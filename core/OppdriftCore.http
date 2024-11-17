@@ -1,0 +1,6 @@
+@OppdriftCore_HostAddress = http://localhost:5270
+
+GET {{OppdriftCore_HostAddress}}/status/
+Accept: application/json
+
+###

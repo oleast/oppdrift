@@ -1,0 +1,66 @@
+# .NET build artifacts
+bin/
+obj/
+*.log
+
+# User-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider-specific files
+.idea/
+*.iml
+.idea_modules/
+
+# Logs
+*.log
+*.tlog
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Dependency directories
+node_modules/
+wwwroot/lib/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+
+# Publish output
+publish/
+out/
+
+# Coverage reports
+coverage/
+*.coverage
+*.coveragexml
+
+# Generated files
+*.g.cs
+*.g.i.cs
+*.dll
+*.exe
+*.pdb
+
+# Environment files
+.env
+.env.*
+
+# macOS-specific files
+*.DS_Store
+._*
+
+# Optional: if using Secrets.json in development
+secrets.json
