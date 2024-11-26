@@ -1,10 +1,11 @@
+# Stage 1: Build
 FROM node:22 AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json ./
 
-RUN npm ci
+RUN npm install
 
 COPY . .
 
@@ -17,10 +18,11 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/build ./build
 
 RUN npm ci --only=production
 
-EXPOSE 3333
+ENV HOST=0.0.0.0
+EXPOSE 3000
 
-CMD ["npm", "start", "--", "--host=0.0.0.0"]
+CMD ["npm", "start"]
